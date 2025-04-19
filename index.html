@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Islem | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/is.png" type="image/png">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    
+    <div class="container">
+      <h1 class="logo">Islem</h1>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <button id="language-toggle" class="language-toggle">العربية</button>
+          </li>
+          <li><a href="#" data-i18n="home">Home</a></li>
+          <li><a href="#about" data-i18n="about">About</a></li>
+          <li><a href="#projects" data-i18n="projects">Information</a></li>
+          <li><a href="#contact" data-i18n="contact">Contact</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div>
+        <h2 data-i18n="hero.title">Hi, I'm Islem</h2>
+        <p data-i18n="hero.subtitle">Front-End Developer & Designer</p>
+      </div>
+      <img src="assets/undraw_books_wxzz.svg" alt="Books Illustration" class="hero-image" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <div class="about-text">
+        <h2 data-i18n="about.title">Who I am?</h2>
+        <p data-i18n="about.description">I am Islem, a web developer passionate about code, design, and creativity. I build engaging and clean websites.</p>
+      </div>
+      <img src="assets/undraw_designer_efwz.svg" alt="Designer Illustration" class="about-image" />
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2 data-i18n="projects.title">Books for learning</h2>
+    <div class="books-container">
+      <div class="book-card">
+        <img src="assets/book-cover1.jpg" alt="Python Programming Book Cover" class="book-cover">
+        <h3 data-i18n="book1.title">Python Programming Guide</h3>
+        <p data-i18n="book1.description">Complete guide from basics to advanced topics</p>
+        <a href="assets/python1.pdf" class="download-btn" download>
+          <span data-i18n="download">Download</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="book-card">
+        <img src="assets/book-cover2.jpg" alt="Web Design Book Cover" class="book-cover">
+        <h3 data-i18n="book2.title">Modern Web Design</h3>
+        <p data-i18n="book2.description">Learn responsive design and UI/UX principles</p>
+        <a href="assets/webbook.pdf" class="download-btn" download>
+          <span data-i18n="download">Download</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="book-card">
+        <img src="assets/book-cover3.jpg" alt="JavaScript Book Cover" class="book-cover">
+        <h3 data-i18n="book3.title">JavaScript Mastery</h3>
+        <p data-i18n="book3.description">Advanced JavaScript concepts and patterns</p>
+        <a href="assets/jsbook.pdf" class="download-btn" download>
+          <span data-i18n="download">Download</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="book-card">
+        <img src="assets/HTML.jpg" alt="HTML Book Cover" class="book-cover">
+        <h3 data-i18n="book4.title">HTML Book</h3>
+        <p data-i18n="book4.description"></p>
+        <a href="assets/htmlbook.pdf" class="download-btn" download>
+          <span data-i18n="download">Download</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2 class="vv" data-i18n="contact.title">Contact Me</h2>
+    <p data-i18n="contact.email">Email: islemhanache49@gmail.com</p>
+    <p data-i18n="contact.phone">Phone number: 0552497465</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

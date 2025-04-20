@@ -109,7 +109,7 @@ body {
   
   .about-text p {
     font-size: 1.1rem;
-    color: #7f8c8d;
+    color: #5f7c7f;
     line-height: 1.8;
   }
   
@@ -124,8 +124,9 @@ body {
   /* Projects Section */
   .projects {
     margin: 4rem ;
-    padding: 6rem 20px;
+    padding: 4rem 20px;
     background-color: #f5f7fa;
+    border-radius: 5%;
   }
   
   .projects h2 {

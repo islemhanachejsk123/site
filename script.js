@@ -83,14 +83,25 @@ document.addEventListener('DOMContentLoaded', () => {
     changeLanguage(newLang);
   });
 });
-// إضافة حدث النقر على زر القائمة
+// تحسينات القائمة المنسدلة
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.createElement('button');
   menuToggle.className = 'menu-toggle';
   menuToggle.innerHTML = '☰';
+  menuToggle.setAttribute('aria-label', 'Toggle menu');
   document.querySelector('.navbar .container').prepend(menuToggle);
   
   menuToggle.addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('active');
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+    menuToggle.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+  });
+  
+  // إغلاق القائمة عند النقر على رابط
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('active');
+      document.querySelector('.menu-toggle').innerHTML = '☰';
+    });
   });
 });

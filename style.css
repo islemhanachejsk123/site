@@ -12,7 +12,7 @@ body {
   .navbar {
     background-color: #222;
     color: #fff;
-    padding: 0 0;
+    padding: 0 50px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -59,7 +59,7 @@ body {
     padding: 6rem 20px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     text-align: center;
-    height: 45vh;
+    height: 47vh;
   }
   
   .hero-content {
@@ -392,4 +392,34 @@ html[lang="ar"] .about-content {
   .nav-links.active {
     display: flex;
   }
+}
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-icon {
+  color: #ecf0f1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+  background-color: #4CAF50;
+  transform: translateY(-5px);
+  color: white;
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
 }

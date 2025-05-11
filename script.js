@@ -21,7 +21,12 @@ const translations = {
     "download": "Download",
     "contact.title": "Contact Me",
     "contact.email": "Email: islemhanache49@gmail.com",
-    "contact.phone": "Phone number: 0552497465"
+    "contact.phone": "Phone number: 0552497465",
+    "skills.title": "My Skills",
+    "skill1.name": "HTML",
+    "skill2.name": "CSS",
+    "skill3.name": "JavaScript",
+    "skill4.name": "UI/UX Design",
   },
   ar: {
     home: "الرئيسية",
@@ -44,15 +49,19 @@ const translations = {
     "download": "تحميل",
     "contact.title": "اتصل بي",
     "contact.email": "البريد الإلكتروني: islemhanache49@gmail.com",
-    "contact.phone": "رقم الهاتف: 0552497465"
+    "contact.phone": "رقم الهاتف: 0552497465",
+    "skills.title": "مهاراتي",
+    "skill1.name": "HTML",
+    "skill2.name": "CSS",
+    "skill3.name": "JavaScript",
+    "skill4.name": "تصميم واجهات المستخدم",
   }
 };
 
-// تغيير اللغة
+// تغيير اللغة (بدون عكس الاتجاه)
 function changeLanguage(lang) {
-  // تغيير لغة واتجاه الصفحة
+  // تغيير لغة الصفحة فقط (بدون تغيير الاتجاه)
   document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
   
   // تحديث جميع النصوص
   document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -104,4 +113,29 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.menu-toggle').innerHTML = '☰';
     });
   });
+});
+// أضف هذا في نهاية ملف script.js
+function animateSkillBars() {
+  const skills = document.querySelectorAll('.skill-level');
+  skills.forEach(skill => {
+    const level = skill.getAttribute('data-level');
+    skill.style.setProperty('--target-width', level);
+    skill.style.width = level;
+  });
+}
+
+// استدعاء الدالة عند التمرير إلى القسم
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateSkillBars();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  const skillsSection = document.querySelector('.skills');
+  if (skillsSection) {
+    observer.observe(skillsSection);
+  }
 });

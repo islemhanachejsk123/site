@@ -5,7 +5,9 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),   url('assets/img1.jpg')
+    background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),   url('assets/img1.jpg');
+    text-align: left; /* أو 'start' لدعم كلا الاتجاهين */
+    direction: ltr; /* ثابت للاتجاه من اليسار لليمين */
   }
   
   /* Navbar */
@@ -38,6 +40,7 @@ body {
     list-style: none;
     display: flex;
     gap: 2rem;
+    direction: ltr;
   }
   
   .nav-links li a {
@@ -318,17 +321,6 @@ body {
   background-color: #4CAF50;
 }
 
-/* تنسيقات للغة العربية */
-html[lang="ar"] body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Arabic', sans-serif;
-  text-align: right;
-}
-
-html[lang="ar"] .hero-content,
-html[lang="ar"] .about-content {
-  flex-direction: row-reverse;
-}
-
 @media (max-width: 768px) {
   html[lang="ar"] .hero-content,
   html[lang="ar"] .about-content {
@@ -422,4 +414,62 @@ html[lang="ar"] .about-content {
 .social-icon svg {
   width: 24px;
   height: 24px;
+}
+/* Skills Section */
+.skills {
+  padding: 5rem 20px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 5%;
+  margin: 4rem 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+  border-radius: 20px;
+  display: block;
+  margin: 50px;
+  
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.skill-bar {
+  height: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  width: 0; /* سيتم تعديله عبر JavaScript */
+  transition: width 1.5s ease-in-out;
+}
+
+/* Animation for skill bars */
+@keyframes fillSkillBar {
+  from { width: 0; }
+  to { width: var(--target-width); }
 }
